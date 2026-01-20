@@ -1,18 +1,55 @@
-# React + Vite
+# AI Interview Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack AI-powered application to help software engineers **analyze resumes**, **generate interview questions**, and **create study plans**. Built with **FastAPI** (backend), **React** (frontend), and **OpenRouter GPT-4o-mini** AI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Generate Interview Questions**  
+  Ask for technical, behavioral, and system design questions for any topic.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Analyze Resume**  
+  AI evaluates your resume and returns strengths, weaknesses, suggestions, and a score.
 
-Note: This will impact Vite dev & build performances.
+- **Generate Study Plan**  
+  Create a daily study plan with actionable tips based on your goal.
 
-## Expanding the ESLint configuration
+- **Production-ready Backend**  
+  - Handles invalid AI output safely  
+  - Retries AI calls automatically  
+  - Defaults returned on failure → no 500 errors  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend-ready**  
+  - React forms for all three routes  
+  - Displays AI output neatly  
+  - Handles errors gracefully  
+
+---
+
+## Tech Stack
+
+- **Backend:** FastAPI, Pydantic, Uvicorn, OpenRouter GPT API  
+- **Frontend:** React, Vite, JavaScript  
+- **AI Provider:** OpenRouter (GPT-4o-mini)  
+
+---
+
+## Project Structure
+
+ai-interview-assistant/
+├─ backend/
+│ ├─ main.py # FastAPI app
+│ ├─ agent.py # AI agents setup
+│ ├─ models.py # Pydantic models
+│ └─ venv/ # optional virtual environment
+├─ frontend/
+│ ├─ package.json
+│ ├─ src/
+│ │ ├─ App.jsx
+│ │ ├─ api.js # API helper
+│ │ └─ Forms.jsx # All three forms
+│ └─ public/
+│ └─ index.html
+
+
